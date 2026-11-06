@@ -1,0 +1,13 @@
+
+/* Notifications */
+.notifications-heading,.notification-item,.notification-title-row{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.notifications-heading{margin-bottom:22px}.notifications-heading h2{margin-bottom:4px}
+.muted-text,.notification-item small{color:var(--muted,#687386)}
+.notification-list{display:grid;gap:12px}.notification-item{border-left:4px solid transparent}
+.notification-item.unread{border-left-color:var(--primary,#3157d5);background:var(--surface,#fff)}
+.notification-item h3{margin:0;font-size:16px}.notification-item p{margin:8px 0}.notification-copy{min-width:0;flex:1}
+.notification-dot{width:9px;height:9px;border-radius:50%;background:var(--primary,#3157d5);flex:0 0 auto}
+.notification-nav-link{display:inline-flex;align-items:center;gap:6px}
+.notification-count{display:inline-flex;min-width:19px;height:19px;padding:0 5px;align-items:center;justify-content:center;border-radius:999px;background:#d9364f;color:#fff;font-size:11px;font-weight:700}
+.empty-notifications{text-align:center;padding:32px}
+@media(max-width:640px){.notifications-heading,.notification-item{align-items:flex-start;flex-direction:column}}
