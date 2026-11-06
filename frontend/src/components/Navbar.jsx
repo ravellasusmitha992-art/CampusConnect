@@ -26,6 +26,7 @@ export default function Navbar() {
               </>
             )}
             <Link to="/forum">Forum</Link>
+            <Link to="/profile">Profile</Link>
             {user.role === 'ADMIN' && <Link to="/admin">Admin</Link>}
             <button onClick={handleLogout}>Logout</button>
           </>

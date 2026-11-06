@@ -477,3 +477,24 @@ h3 { margin-bottom: 8px; font-size: 17px; }
   font-weight: 600;
   color: var(--slate);
 }
+
+
+/* ---------- Profile ---------- */
+.profile-page { max-width: 960px; }
+.profile-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+.profile-heading h1 { font-size: 34px; margin: 4px 0 8px; }
+.profile-heading p:not(.profile-eyebrow), .profile-section-note { color: var(--ink-soft); font-size: 14px; }
+.profile-eyebrow { color: var(--amber-dark); font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+.profile-avatar { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: var(--navy); color: white; font: 600 28px 'Fraunces', Georgia, serif; }
+.profile-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 18px; }
+.profile-page label { display: block; color: var(--ink); font-size: 13px; font-weight: 600; }
+.profile-page label input, .profile-page label textarea { display: block; margin-top: 7px; font-weight: 400; }
+.profile-page input:disabled { background: #F3F4F6; color: var(--ink-soft); cursor: not-allowed; }
+.profile-bio-label { margin-top: 2px; }
+.profile-page textarea { resize: vertical; }
+.profile-form-footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.profile-form-footer small { color: var(--ink-soft); }
+.profile-save { width: auto !important; min-width: 150px; }
+.password-form { max-width: 520px; }
+.profile-success { padding: 10px 13px; margin-bottom: 14px; border: 1px solid #86EFAC; border-radius: 7px; background: #F0FDF4; color: #166534; font-size: 14px; }
+@media (max-width: 640px) { .profile-grid { grid-template-columns: 1fr; } .profile-heading h1 { font-size: 29px; } .profile-avatar { width: 52px; height: 52px; } .profile-form-footer { align-items: stretch; flex-direction: column; } .profile-save { width: 100% !important; } }

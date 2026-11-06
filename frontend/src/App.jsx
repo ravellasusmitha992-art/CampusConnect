@@ -9,6 +9,7 @@ import Events from './pages/Events.jsx';
 import Announcements from './pages/Announcements.jsx';
 import Forum from './pages/Forum.jsx';
 import Admin from './pages/Admin.jsx';
+import Profile from './pages/Profile.jsx';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<ProtectedRoute allowedRoles={['STUDENT', 'FACULTY', 'ADMIN']}><Profile /></ProtectedRoute>} />
         <Route path="/register" element={<Register />} />
         <Route path="/events" element={
           <ProtectedRoute allowedRoles={['STUDENT', 'FACULTY']}><Events /></ProtectedRoute>
