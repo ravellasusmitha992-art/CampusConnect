@@ -22,3 +22,4 @@ frontend/dist/
 *.log
 
 backend/runlog.txt
+frontend/.vite/
