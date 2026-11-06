@@ -27,6 +27,19 @@ public class User {
 
     private String department;
 
+    // Optional profile details. Existing users remain valid because these are nullable.
+    @Column(length = 20)
+    private String phone;
+
+    @Column(length = 500)
+    private String bio;
+
+    @Column(length = 100)
+    private String course;
+
+    @Column(length = 30)
+    private String studyYear;
+
     @Builder.Default
     private boolean enabled = true;
 }

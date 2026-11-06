@@ -14,6 +14,15 @@ export function AuthProvider({ children }) {
     setUser(authResponse);
   };
 
+  const updateUser = (profile) => {
+    setUser((current) => {
+      if (!current) return current;
+      const updated = { ...current, ...profile };
+      localStorage.setItem('cc_user', JSON.stringify(updated));
+      return updated;
+    });
+  };
+
   const logout = () => {
     localStorage.removeItem('cc_token');
     localStorage.removeItem('cc_user');
@@ -21,7 +30,7 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout, updateUser }}>
       {children}
     </AuthContext.Provider>
   );
